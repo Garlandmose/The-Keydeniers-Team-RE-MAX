@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Keydeniers Team | RE/MAX — Your Keys to Home, Anywhere in the World. Residential, Relocation & Off-Campus Housing in Atlanta, GA & Globally." />
+  
+  <!-- Open Graph for Facebook -->
+  <meta property="og:title" content="The Keydeniers Team | RE/MAX" />
+  <meta property="og:description" content="Keys to Global Living — From Atlanta to Auckland. Buy, Rent, Relocate, or Find Off-Campus Housing." />
+  <meta property="og:image" content="https://placehold.co/1200x630/0056b3/ffffff?text=The+Keydeniers+Team+%7C+RE%7CMAX" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  
+  <title>The Keydeniers Team | RE/MAX — Keys to Global Living</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fair Housing & GDPR Compliance Banner -->
+  <div class="compliance-banner">
+    🏡 <strong>Fair Housing Notice:</strong> We do not discriminate on the basis of race, color, religion, sex, handicap, familial status, or national origin. | 
+    🌐 GDPR/CCPA compliant — your data is secure.
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <span class="key">🔑</span>
+          <strong>The Keydeniers Team</strong>
+          <span class="remax">| RE<span class="remax-red">|</span>MAX</span>
+        </div>
+        <button class="mobile-menu-btn">☰</button>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#listings">Listings</a>
+          <a href="#student">Off-Campus</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Your Keys to Home — Anywhere in the World</h1>
+      <p>From Atlanta to Auckland, Paris to Beijing — we help you buy, rent, relocate, or find off-campus housing with confidence.</p>
+      <div class="hero-btns">
+        <a href="#listings" class="btn btn-primary">Browse Listings</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>How We Help You</h2>
+        <p>Expertise that spans borders — with local knowledge and global reach.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <div class="service-content">
+            <h3>Residential Buying & Selling</h3>
+            <p>From starter homes to luxury estates — we guide you through every step with market insights and negotiation expertise.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✈️</div>
+          <div class="service-content">
+            <h3>Global Relocation</h3>
+            <p>Relocating internationally? We partner with trusted agents in NZ, AU, UK, FR, IE, CN and more to make your move seamless.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <div class="service-content">
+            <h3>Off-Campus Housing</h3>
+            <p>Find safe, convenient student housing near top universities — with lease flexibility, roommate matching, and virtual tours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Listings</h2>
+        <p>Hand-picked homes for sale, rent, and student living — updated daily.</p>
+      </div>
+
+      <div class="listings-tabs">
+        <button class="tab-btn active" data-tab="all">All</button>
+        <button class="tab-btn" data-tab="sale">For Sale</button>
+        <button class="tab-btn" data-tab="rent">For Rent</button>
+        <button class="tab-btn" data-tab="student">Off-Campus</button>
+      </div>
+
+      <div class="listings-grid" id="listings-container">
+        <!-- Listings injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Housing -->
+  <section id="student" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Off-Campus Student Housing</h2>
+        <p>Safe, affordable, and close to campus — for students in Atlanta and worldwide.</p>
+      </div>
+
+      <div class="filters">
+        <div class="filter-group">
+          <label>University</label>
+          <select id="university-filter" class="form-control">
+            <option value="">All Universities</option>
+            <option value="georgia-tech">Georgia Tech</option>
+            <option value="emory">Emory University</option>
+            <option value="uga">University of Georgia</option>
+            <option value="auckland">University of Auckland</option>
+            <option value="sydney">University of Sydney</option>
+            <option value="oxford">University of Oxford</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Distance to Campus: <span id="distance-value" class="range-value">1.5 miles</span></label>
+          <input type="range" id="distance-filter" min="0.5" max="5" step="0.5" value="1.5" class="form-control">
+        </div>
+        <div class="filter-group">
+          <label>Room Type</label>
+          <div>
+            <label><input type="radio" name="room-type" value="all" checked> All</label>
+            <label><input type="radio" name="room-type" value="private"> Private Room</label>
+            <label><input type="radio" name="room-type" value="shared"> Shared Room</label>
+            <label><input type="radio" name="room-type" value="entire"> Entire Unit</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="listings-grid" id="student-listings">
+        <!-- Student listings injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Rebecca & The Keydeniers Team</h2>
+        <p>Bringing global expertise to your local real estate journey.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-img"></div>
+        <div>
+          <h3>Rebecca Keydeniers</h3>
+          <p><strong>Founder | Global Relocation Specialist | RE/MAX</strong></p>
+          <p>Rebecca Keydeniers is the founder of <em>The Keydeniers Team | RE/MAX</em>, a globally connected real estate practice headquartered in Atlanta, GA — with boots on the ground across the USA and trusted partnerships in New Zealand, Australia, the UK, Ireland, France, China, and beyond.</p>
+          <p>With deep expertise in <strong>residential transactions</strong>, <strong>international relocation</strong>, and <strong>student housing solutions</strong>, Rebecca helps clients transition smoothly — whether buying their first condo near Georgia Tech, relocating to Paris for work, or investing in a rental property in Auckland.</p>
+          <p><em>“A home isn’t just an address — it’s where life begins. I’m here to make sure yours starts right — no matter where ‘right’ is.”</em></p>
+          <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem;">Work With Rebecca</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Clients Say</h2>
+        <p>Trusted by homeowners, investors, students, and expats worldwide.</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            Rebecca helped me buy my first home in Atlanta while I was still finishing my PhD in London. Her virtual tours and digital signing process made it effortless. She even coordinated with movers!
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">SJ</div>
+            <div>
+              <strong>Sarah J.</strong><br>
+              <small>Georgia Tech Student → Homeowner</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            Moving our family from Atlanta to Auckland was daunting — until we met Rebecca. Her partner in NZ found us the perfect home in 2 weeks. Seamless!
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <strong>Michael R.</strong><br>
+              <small>Relocated: USA → New Zealand</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            As an international student, finding safe housing near Emory was stressful. Rebecca’s off-campus portal saved me — and her roommate-matching worked perfectly!
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">LW</div>
+            <div>
+              <strong>Liu Wei</strong><br>
+              <small>Emory University, China</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get in Touch</h2>
+        <p>Let’s find your next home — local or global.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Reach Out</h3>
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Atlanta Office</strong><br>
+              240 Sandy Springs Pl, Atlanta, GA 30328, USA<br>
+              *(Serving USA, NZ, AU, UK, FR, IE, CN & more)*
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>Call/Text</strong><br>
+              <a href="tel:+14074043546" style="color: var(--dark);">(407) 404-3546</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:keydeniersrebecca_remax@outlook.com" style="color: var(--dark);">keydeniersrebecca_remax@outlook.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📱</div>
+            <div>
+              <strong>Facebook</strong><br>
+              <a href="https://facebook.com/KeydeniersRebeccaRealtor" target="_blank" style="color: var(--primary);">Keydeniers Rebecca Realtor</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- ✅ FIXED: name="email" added, _replyto, _cc, _next -->
+          <form id="contact-form" action="https://formspree.io/f/xykykwvv" method="POST">
+            <input type="hidden" name="_subject" value="PropertyParams General Inquiry">
+            <input type="hidden" name="_replyto" value="email">
+            <input type="hidden" name="_cc" value="keydeniersrebecca_remax@outlook.com">
+            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <!-- ✅ name="email" is critical for Formspree -->
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm interested in...</label>
+              <select id="interest" name="interest" class="form-control">
+                <option value="buying">Buying a Home</option>
+                <option value="selling">Selling My Home</option>
+                <option value="renting">Renting</option>
+                <option value="student">Off-Campus Housing</option>
+                <option value="relocation">International Relocation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="color: white; margin-bottom: 1.5rem;">
+            <span class="key">🔑</span>
+            <strong>The Keydeniers Team</strong>
+          </div>
+          <p>Your keys to home — anywhere in the world. Licensed in GA & partnered globally.</p>
+          <div class="social-links">
+            <a href="https://facebook.com/KeydeniersRebeccaRealtor" class="social-link" target="_blank" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Instagram">ig</a>
+            <a href="#" class="social-link" aria-label="YouTube">yt</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#listings">Listings</a></li>
+            <li><a href="#student">Off-Campus Housing</a></li>
+            <li><a href="#about">About Rebecca</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Residential Buying</a></li>
+            <li><a href="#">Home Selling</a></li>
+            <li><a href="#">Rentals</a></li>
+            <li><a href="#">Student Housing</a></li>
+            <li><a href="#">Global Relocation</a></li>
+            <li><a href="#">Property Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Coverage</h4>
+          <ul class="footer-links">
+            <li>🇺🇸 USA (All States)</li>
+            <li>🇳🇿 New Zealand</li>
+            <li>🇦🇺 Australia</li>
+            <li>🇬🇧 UK</li>
+            <li>🇫🇷 France</li>
+            <li>🇮🇪 Ireland</li>
+            <li>🇨🇳 China</li>
+            <li>+ More</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 The Keydeniers Team | RE/MAX. All rights reserved.<br>
+        <a href="#" style="color: #adb5bd;">Privacy Policy</a> | 
+        <a href="#" style="color: #adb5bd;">Terms of Service</a> | 
+        <a href="#" style="color: #adb5bd;">Fair Housing</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ Property Detail Modal (FIXED) -->
+  <div id="propertyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="propertyModal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ✅ Virtual Tour Modal (with name="email") -->
+  <div id="virtualTourModal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="virtualTourModal">&times;</span>
+      <h2 style="color: var(--primary); margin-bottom: 1rem;">📅 Book a Virtual Tour</h2>
+      <p id="virtualTourPropertyAddress" style="font-weight: 600; margin-bottom: 1.5rem; color: var(--dark);"></p>
+
+      <form id="virtualTourForm" action="https://formspree.io/f/xykykwvv" method="POST">
+        <input type="hidden" name="_subject" value="PropertyParams Virtual Tour Request">
+        <input type="hidden" name="_replyto" value="email">
+        <input type="hidden" name="_cc" value="keydeniersrebecca_remax@outlook.com">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+        <input type="hidden" name="property_address" id="vt-property-address">
+
+        <div class="form-group">
+          <label for="vt-name">Full Name *</label>
+          <input type="text" id="vt-name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <!-- ✅ name="email" is required for Formspree -->
+          <label for="vt-email">Email *</label>
+          <input type="email" id="vt-email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="vt-phone">Phone *</label>
+          <input type="tel" id="vt-phone" name="phone" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="vt-date">Preferred Date & Time (Optional)</label>
+          <input type="datetime-local" id="vt-date" name="preferred_datetime" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="vt-message">Additional Notes (Optional)</label>
+          <textarea id="vt-message" name="message" class="form-control" rows="3" placeholder="e.g., time zone, accessibility needs..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end; margin-top: 1.5rem;">
+          <button type="button" class="btn" data-modal="virtualTourModal" data-action="close">Cancel</button>
+          <button type="submit" class="btn btn-primary">✅ Book Virtual Tour</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ✅ Contact Options Modal -->
+  <div id="contactOptionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="contactOptionsModal">&times;</span>
+      <h2 style="color: var(--primary); margin-bottom: 1rem;">📞 Contact Rebecca</h2>
+      <p>Choose how you'd like to reach out:</p>
+
+      <div style="margin: 2rem 0; display: flex; flex-direction: column; gap: 1.5rem;">
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+          <h3 style="margin: 0 0 0.75rem; color: var(--secondary);">📱 Text or Call</h3>
+          <p><strong>Rebecca Keydeniers</strong><br>
+          <a href="tel:+14074043546" style="font-size: 1.25rem; color: var(--dark); display: inline-flex; align-items: center; gap: 0.5rem;">
+            📞 (407) 404-3546
+          </a></p>
+          <p style="font-size: 0.9rem; color: #6c757d;">Available Mon–Sat, 8am–8pm ET</p>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+          <h3 style="margin: 0 0 0.75rem; color: var(--primary);">✉️ Email</h3>
+          <p>
+            <a href="mailto:keydeniersrebecca_remax@outlook.com?subject=PropertyParams Inquiry" 
+               style="font-size: 1.1rem; color: var(--dark); display: inline-flex; align-items: center; gap: 0.5rem;">
+              ✉️ keydeniersrebecca_remax@outlook.com
+            </a>
+          </p>
+          <p style="font-size: 0.9rem; color: #6c757d;">We respond within 2 hours during business hours.</p>
+        </div>
+
+        <div style="background: #e9ecef; padding: 1.25rem; border-radius: 8px; font-size: 0.95rem;">
+          <strong>📍 Office:</strong> 240 Sandy Springs Pl, Atlanta, GA 30328<br>
+          <strong>🌐 Facebook:</strong> 
+          <a href="https://facebook.com/KeydeniersRebeccaRealtor" target="_blank" style="color: var(--primary);">
+            Keydeniers Rebecca Realtor
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <button class="btn" data-modal="contactOptionsModal" data-action="close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Save Notification -->
+  <div id="saveNotification" class="save-notification">
+    ❤️ Saved to Favorites!
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
