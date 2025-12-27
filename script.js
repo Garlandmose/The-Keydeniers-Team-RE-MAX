@@ -2,11 +2,11 @@
 const CONTACT = {
   phone: "(407) 404-3546",
   address: "240 Sandy Springs Pl, Atlanta, GA 30328, USA",
-  email: "keydeniersrebecca_remax@outlook.com",
+  email: "joepossum@gmail.com",
   facebook: "https://facebook.com/KeydeniersRebeccaRealtor"
 };
 
-// ✅ FEATURED LISTINGS — CLEANED (no trailing spaces)
+// ✅ FEATURED LISTINGS
 const listingsData = [
   {
     id: 1,
@@ -338,92 +338,6 @@ function openVirtualTourModal(id) {
   document.body.style.overflow = 'hidden';
 }
 
-// ✅ Contact Form with Email Validation
-document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const emailInput = form.querySelector('#email');
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
-
-  const email = emailInput.value.trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email || !emailRegex.test(email)) {
-    alert('❌ Please enter a valid email address (e.g., name@example.com).');
-    btn.disabled = false;
-    btn.textContent = 'Send Message';
-    return;
-  }
-
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-
-    btn.disabled = false;
-    btn.textContent = 'Send Message';
-
-    if (res.ok) {
-      alert('✅ Message sent successfully!\n\nRebecca will contact you within 2 hours. Thank you!');
-      form.reset();
-    } else {
-      const error = await res.json().catch(() => ({}));
-      alert(`❌ Submission failed: ${error.error || 'Unknown error'}`);
-    }
-  } catch (err) {
-    btn.disabled = false;
-    btn.textContent = 'Send Message';
-    alert('❌ Network error. Please check your connection or try emailing directly.');
-  }
-});
-
-// ✅ Virtual Tour Form with Validation
-document.getElementById('virtualTourForm')?.addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const emailInput = form.querySelector('#vt-email');
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.textContent = 'Booking...';
-
-  const email = emailInput.value.trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email || !emailRegex.test(email)) {
-    alert('❌ Please enter a valid email address (e.g., name@example.com).');
-    btn.disabled = false;
-    btn.textContent = '✅ Book Virtual Tour';
-    return;
-  }
-
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-
-    btn.disabled = false;
-    btn.textContent = '✅ Book Virtual Tour';
-
-    if (res.ok) {
-      alert('✅ Virtual tour request sent!\n\nRebecca will contact you shortly to confirm your appointment. You’ll also receive a confirmation email.');
-      form.reset();
-      document.getElementById('virtualTourModal').style.display = 'none';
-      document.body.style.overflow = 'auto';
-    } else {
-      const error = await res.json().catch(() => ({}));
-      alert(`❌ Booking failed: ${error.error || 'Please try again or call directly.'}`);
-    }
-  } catch (err) {
-    btn.disabled = false;
-    btn.textContent = '✅ Book Virtual Tour';
-    alert('❌ Network error. Please check your connection.');
-  }
-});
-
 // Save Property
 function saveProperty(id) {
   const saved = JSON.parse(localStorage.getItem('savedProperties') || '[]');
@@ -476,8 +390,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Init
+// ✅ Optional: Form submission UX feedback
 document.addEventListener('DOMContentLoaded', () => {
   renderListings('all');
   renderStudentListings();
+
+  // Add loading state to all submit buttons
+  document.querySelectorAll('form').forEach(form => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (!submitBtn) return;
+
+    form.addEventListener('submit', () => {
+      submitBtn.disabled = true;
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '📤 Sending...';
+      // Reset after 3s (in case network slow or redirect delayed)
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }, 3000);
+    });
+  });
 });
