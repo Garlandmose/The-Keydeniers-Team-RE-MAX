@@ -6,7 +6,7 @@ const CONTACT = {
   facebook: "https://facebook.com/KeydeniersRebeccaRealtor"
 };
 
-// ✅ FEATURED LISTINGS — Supports `images` (array) or `img` (string)
+// ✅ FEATURED LISTINGS — Now with full Zillow image arrays (e.g., 32 for CO listing)
 const listingsData = [
   {
     id: 1,
@@ -39,19 +39,19 @@ const listingsData = [
       'https://photos.zillowstatic.com/fp/bd1783e10d5323a5cf306db39029f26e-uncropped_scaled_within_1536_1152.webp',
       'https://photos.zillowstatic.com/fp/f90436d1dfd299f136d274ec9fba447c-uncropped_scaled_within_1536_1152.webp',
       'https://photos.zillowstatic.com/fp/2a9cd0644803813e5bad97feee33fac1-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/70b32338d0a29726ce7dd47bc7241de5-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/c1aeca11feca51df4d32a8de1712e0ea-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/ad9505d628a40224a1ebf88216af9a05-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/90beb038911d3839adb07cee9240aaf2-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/beb8c1594b32040bd8a5f67b0aab1772-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/8489b43016d68306d3fce521de559318-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/461c14ee9b4d0420b9ac02b1cbeaa87d-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/d8a150c3c5cf5d8a5f4d5affc458bfb7-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/8ce0bd75dba148a30edc00b0754bca61-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/5dcdc8f1941880d7cc1d8b09366f500d-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/5cf3b6c31c22eee4fcfd3073e64a2054-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/bcbeebb4f0e2e13504a9fdeee5b2d7d0-uncropped_scaled_within_1536_1152.webp',
-       'https://photos.zillowstatic.com/fp/f750af0fac47a856f3bfad8e12b04775-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/70b32338d0a29726ce7dd47bc7241de5-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/c1aeca11feca51df4d32a8de1712e0ea-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/ad9505d628a40224a1ebf88216af9a05-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/90beb038911d3839adb07cee9240aaf2-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/beb8c1594b32040bd8a5f67b0aab1772-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/8489b43016d68306d3fce521de559318-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/461c14ee9b4d0420b9ac02b1cbeaa87d-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/d8a150c3c5cf5d8a5f4d5affc458bfb7-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/8ce0bd75dba148a30edc00b0754bca61-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/5dcdc8f1941880d7cc1d8b09366f500d-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/5cf3b6c31c22eee4fcfd3073e64a2054-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/bcbeebb4f0e2e13504a9fdeee5b2d7d0-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/f750af0fac47a856f3bfad8e12b04775-uncropped_scaled_within_1536_1152.webp',
     ],
     features: [
       'Hardwood Floors',
@@ -87,7 +87,6 @@ const listingsData = [
       'https://photos.zillowstatic.com/fp/f4dfc07c6289a23c1cddbc13ee83a4c8-uncropped_scaled_within_1536_1152.webp',
       'https://photos.zillowstatic.com/fp/8eb06a04cfdf62cd986c3bb392bbb4f0-uncropped_scaled_within_1536_1152.webp',
       'https://photos.zillowstatic.com/fp/9b9f2d9470bdd207aa30ec601118cf28-uncropped_scaled_within_1536_1152.webp',
-      
     ],
     features: [
       'In-Unit Laundry',
@@ -234,6 +233,99 @@ const studentListingsContainer = document.getElementById('student-listings');
 const modalBody = document.getElementById('modalBody');
 const saveNotification = document.getElementById('saveNotification');
 
+// ✅ ENHANCED LIGHTBOX — Auto-rotate + arrows + keyboard
+const lightboxHTML = `
+  <div id="imageLightbox" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+      <img id="lightbox-img" src="" alt="Property image" class="lightbox-img">
+      <div id="lightbox-caption"></div>
+      <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+      <div id="lightbox-counter"></div>
+    </div>
+  </div>
+`;
+if (!document.getElementById('imageLightbox')) {
+  document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+}
+
+// ✅ Enhanced Lightbox Controller
+function openLightbox(images, startIndex = 0, captions = []) {
+  const lightbox = document.getElementById('imageLightbox');
+  const imgEl = document.getElementById('lightbox-img');
+  const captionEl = document.getElementById('lightbox-caption');
+  const counterEl = document.getElementById('lightbox-counter');
+  const prevBtn = document.querySelector('.lightbox-prev');
+  const nextBtn = document.querySelector('.lightbox-next');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  let currentIndex = startIndex;
+  let autoInterval;
+
+  const updateLightbox = () => {
+    imgEl.src = images[currentIndex];
+    captionEl.textContent = captions[currentIndex] || '';
+    counterEl.textContent = `${currentIndex + 1} / ${images.length}`;
+  };
+
+  const nextSlide = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateLightbox();
+  };
+
+  const prevSlide = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateLightbox();
+  };
+
+  // Controls
+  prevBtn.onclick = (e) => { e.stopPropagation(); prevSlide(); resetAuto(); };
+  nextBtn.onclick = (e) => { e.stopPropagation(); nextSlide(); resetAuto(); };
+  closeBtn.onclick = () => {
+    clearInterval(autoInterval);
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  };
+
+  // Keyboard nav
+  const handleKey = (e) => {
+    if (e.key === 'ArrowLeft') prevSlide();
+    else if (e.key === 'ArrowRight') nextSlide();
+    else if (e.key === 'Escape') closeBtn.click();
+  };
+  document.addEventListener('keydown', handleKey);
+
+  // Cleanup on close
+  const observer = new MutationObserver(() => {
+    if (lightbox.style.display === 'none') {
+      clearInterval(autoInterval);
+      document.removeEventListener('keydown', handleKey);
+      observer.disconnect();
+    }
+  });
+  observer.observe(lightbox, { attributes: true, attributeFilter: ['style'] });
+
+  // Auto-rotate (4s) — pauses on hover/click
+  const startAuto = () => {
+    autoInterval = setInterval(nextSlide, 4000);
+  };
+  const resetAuto = () => {
+    clearInterval(autoInterval);
+    startAuto();
+  };
+
+  imgEl.addEventListener('click', resetAuto); // click image → reset timer
+  lightbox.addEventListener('mouseenter', () => clearInterval(autoInterval));
+  lightbox.addEventListener('mouseleave', startAuto);
+
+  // Init
+  updateLightbox();
+  lightbox.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  startAuto();
+}
+
 // ✅ Universal Modal Close Handler
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('close')) {
@@ -256,32 +348,77 @@ document.addEventListener('click', (e) => {
     e.target.style.display = 'none';
     document.body.style.overflow = 'auto';
   }
+  // Close lightbox
+  if (e.target.classList.contains('lightbox')) {
+    e.target.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
 });
+
+// ✅ Lightbox Open/Close
+function openLightbox(images, startIndex = 0, captions = []) {
+  const lightbox = document.getElementById('imageLightbox');
+  const imgEl = document.getElementById('lightbox-img');
+  const captionEl = document.getElementById('lightbox-caption');
+  const counterEl = document.getElementById('lightbox-counter');
+
+  let currentIndex = startIndex;
+
+  const updateLightbox = () => {
+    imgEl.src = images[currentIndex];
+    captionEl.textContent = captions[currentIndex] || '';
+    counterEl.textContent = `${currentIndex + 1} / ${images.length}`;
+  };
+
+  // Nav
+  document.querySelector('.lightbox-prev').onclick = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateLightbox();
+  };
+  document.querySelector('.lightbox-next').onclick = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateLightbox();
+  };
+  document.querySelector('.lightbox-close').onclick = () => {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  };
+
+  updateLightbox();
+  lightbox.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
 
 // Render Listings
 function renderListings(type = 'all') {
   const filtered = type === 'all' ? listingsData : listingsData.filter(item => item.type === type);
   if (listingsContainer) {
-    listingsContainer.innerHTML = filtered.map(listing => `
-      <div class="listing-card" data-id="${listing.id}">
-        <div class="listing-img" style="background-image: url('${Array.isArray(listing.images) ? listing.images[0] : listing.img}')">
-          <span class="listing-badge">${listing.badge}</span>
-        </div>
-        <div class="listing-content">
-          <div class="listing-price">${listing.price}</div>
-          <div class="listing-address">${listing.address}</div>
-          <div class="listing-features">
-            <span>${listing.beds} BR</span>
-            <span>${listing.baths} BA</span>
-            <span>${listing.sqft} sqft</span>
+    listingsContainer.innerHTML = filtered.map(listing => {
+      const firstImg = Array.isArray(listing.images) ? listing.images[0] : listing.img;
+      return `
+        <div class="listing-card" data-id="${listing.id}">
+          <div class="listing-img" style="background-image: url('${firstImg}')">
+            <span class="listing-badge">${listing.badge}</span>
+            ${listing.images && listing.images.length > 1 
+              ? `<button class="view-all-photos" data-id="${listing.id}">📷 ${listing.images.length} Photos</button>` 
+              : ''}
+          </div>
+          <div class="listing-content">
+            <div class="listing-price">${listing.price}</div>
+            <div class="listing-address">${listing.address}</div>
+            <div class="listing-features">
+              <span>${listing.beds} BR</span>
+              <span>${listing.baths} BA</span>
+              <span>${listing.sqft} sqft</span>
+            </div>
+          </div>
+          <div class="listing-footer">
+            <button class="btn btn-primary view-details-btn" data-id="${listing.id}">View Details</button>
+            <button class="btn save-btn" data-id="${listing.id}">❤️ Save</button>
           </div>
         </div>
-        <div class="listing-footer">
-          <button class="btn btn-primary view-details-btn" data-id="${listing.id}">View Details</button>
-          <button class="btn save-btn" data-id="${listing.id}">❤️ Save</button>
-        </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
   attachListingEventListeners();
 }
@@ -292,26 +429,32 @@ function renderStudentListings() {
   const university = document.querySelector('#university-filter')?.value;
   if (university) filtered = filtered.filter(item => item.university === university);
   if (studentListingsContainer) {
-    studentListingsContainer.innerHTML = filtered.map(listing => `
-      <div class="listing-card" data-id="${listing.id}">
-        <div class="listing-img" style="background-image: url('${Array.isArray(listing.images) ? listing.images[0] : listing.img}')">
-          <span class="listing-badge">${listing.badge}</span>
-        </div>
-        <div class="listing-content">
-          <div class="listing-price">${listing.price}</div>
-          <div class="listing-address">${listing.address}</div>
-          <div class="listing-features">
-            <span>${listing.beds} BR</span>
-            <span>${listing.baths} BA</span>
-            <span>${listing.leaseTerm || 'Flexible'}</span>
+    studentListingsContainer.innerHTML = filtered.map(listing => {
+      const firstImg = Array.isArray(listing.images) ? listing.images[0] : listing.img;
+      return `
+        <div class="listing-card" data-id="${listing.id}">
+          <div class="listing-img" style="background-image: url('${firstImg}')">
+            <span class="listing-badge">${listing.badge}</span>
+            ${listing.images && listing.images.length > 1 
+              ? `<button class="view-all-photos" data-id="${listing.id}">📷 ${listing.images.length} Photos</button>` 
+              : ''}
+          </div>
+          <div class="listing-content">
+            <div class="listing-price">${listing.price}</div>
+            <div class="listing-address">${listing.address}</div>
+            <div class="listing-features">
+              <span>${listing.beds} BR</span>
+              <span>${listing.baths} BA</span>
+              <span>${listing.leaseTerm || 'Flexible'}</span>
+            </div>
+          </div>
+          <div class="listing-footer">
+            <button class="btn btn-primary view-details-btn" data-id="${listing.id}">Virtual Tour</button>
+            <button class="btn contact-btn" data-id="${listing.id}">📞 Contact</button>
           </div>
         </div>
-        <div class="listing-footer">
-          <button class="btn btn-primary view-details-btn" data-id="${listing.id}">Virtual Tour</button>
-          <button class="btn contact-btn" data-id="${listing.id}">📞 Contact</button>
-        </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
   attachListingEventListeners();
 }
@@ -335,9 +478,21 @@ function attachListingEventListeners() {
       document.body.style.overflow = 'hidden';
     });
   });
+  // ✅ Click photos badge → open lightbox
+  document.querySelectorAll('.view-all-photos').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = parseInt(e.target.dataset.id);
+      const property = listingsData.find(p => p.id === id);
+      if (!property) return;
+      const images = property.images || [property.img];
+      const captions = images.map((_, i) => `${property.address} — Photo ${i + 1}`);
+      openLightbox(images, 0, captions);
+    });
+  });
 }
 
-// ✅ MODAL WITH BOOTSTRAP-STYLE CAROUSEL (LIGHTWEIGHT, NO BOOTSTRAP)
+// ✅ MODAL WITH BOOTSTRAP-STYLE CAROUSEL + CLICKABLE IMAGES
 function openModal(id) {
   const property = listingsData.find(p => p.id === id);
   if (!property) return;
@@ -346,7 +501,6 @@ function openModal(id) {
     ? property.images
     : [property.img];
 
-  // Optional per-image captions — customize per listing if needed
   const captions = imageSources.map((_, i) => {
     const base = property.address.split(',')[0];
     return i === 0 ? `${base} — Front` :
@@ -365,13 +519,13 @@ function openModal(id) {
     `;
   }
 
-  // ✅ Carousel HTML (Bootstrap-inspired)
+  // ✅ Carousel with CLICKABLE images (opens lightbox)
   const carouselHTML = `
     <div class="property-carousel">
       <div class="carousel-inner">
         ${imageSources.map((src, i) => `
           <div class="carousel-item ${i === 0 ? 'active' : ''}" data-index="${i}">
-            <img src="${src}" class="d-block w-100 carousel-img" alt="${property.address} — Image ${i + 1}">
+            <img src="${src}" class="d-block w-100 carousel-img clickable-img" data-index="${i}" data-prop-id="${property.id}" alt="${property.address} — Image ${i + 1}">
             <div class="carousel-caption d-none d-md-block">
               <p>${captions[i]}</p>
             </div>
@@ -381,11 +535,9 @@ function openModal(id) {
       ${imageSources.length > 1 ? `
         <button class="carousel-control-prev" type="button" aria-label="Previous">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" aria-label="Next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
         </button>
         <div class="carousel-indicators">
           ${imageSources.map((_, i) => `
@@ -425,6 +577,20 @@ function openModal(id) {
     </div>
   `;
 
+  // ✅ Make carousel images clickable (lightbox)
+  document.querySelectorAll('.clickable-img').forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const propId = parseInt(img.dataset.propId);
+      const idx = parseInt(img.dataset.index);
+      const prop = listingsData.find(p => p.id === propId);
+      if (!prop) return;
+      const imgs = prop.images || [prop.img];
+      const caps = imgs.map((_, i) => `${prop.address} — Photo ${i + 1}`);
+      openLightbox(imgs, idx, caps);
+    });
+  });
+
   // Initialize carousel if multi-image
   if (imageSources.length > 1) {
     initPropertyCarousel();
@@ -447,7 +613,7 @@ function openModal(id) {
   document.body.style.overflow = 'hidden';
 }
 
-// ✅ Lightweight Carousel Controller (Vanilla JS)
+// ✅ Lightweight Carousel Controller
 function initPropertyCarousel() {
   const items = document.querySelectorAll('.carousel-item');
   const indicators = document.querySelectorAll('.carousel-indicators button');
