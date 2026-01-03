@@ -6,7 +6,7 @@ const CONTACT = {
   facebook: "https://facebook.com/KeydeniersRebeccaRealtor"
 };
 
-// ✅ FEATURED LISTINGS
+// ✅ FEATURED LISTINGS — Supports `images` (array) or `img` (string)
 const listingsData = [
   {
     id: 1,
@@ -19,7 +19,29 @@ const listingsData = [
     sqft: 1850,
     lotSize: '0.15 acres',
     yearBuilt: 2018,
-    img: 'https://placehold.co/600x400/e0e0e0/999999?text=Modern+Condo+in+Midtown',
+    images: [
+      'https://photos.zillowstatic.com/fp/42f49df29c3f6fd8301225558617766e-cc_ft_1536.webp',
+      'https://photos.zillowstatic.com/fp/9bddc00355fdc55b4d53b34594de9fde-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/885d2bf35a0e428d1afcfcbe740e7e3c-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/907a6c81719d5a7fabcffabb531f5801-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/97c67fa2c28f9a53313715c88a47cf62-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/7de0408a173394218f401e3b0737c422-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/aa58c3d202d4aedfba6f4ba834244872-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/352da9a81a4f493731023a3a2d36be2c-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/15145fa1ec6e05db4b914ca26ba0bc0c-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/a921de34ccbf2bebeff8a6cbf7b5b91a-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/787ae214e241c921a497229d394e0ff9-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/985336ef23ecb44d41c9808b7da71ed5-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/d67ec871749dc577c83fea4f4e4a7c2a-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/e5ceeaf6c70af3b21f56da80e17b4843-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/6126986caac173be32916467d0185a4b-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/a76fbcca9e104cb685abaf91e3866a85-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/bd1783e10d5323a5cf306db39029f26e-uncropped_scaled_within_1536_1152.webp',
+      'https://photos.zillowstatic.com/fp/f90436d1dfd299f136d274ec9fba447c-uncropped_scaled_within_1536_1152.webp',
+      
+
+      'https://photos.zillowstatic.com/fp/2a9cd0644803813e5bad97feee33fac1-uncropped_scaled_within_1536_1152.webp',
+    ],
     features: [
       'Hardwood Floors',
       'Stainless Appliances',
@@ -41,7 +63,10 @@ const listingsData = [
     sqft: 950,
     lotSize: 'N/A',
     yearBuilt: 2005,
-    img: 'https://placehold.co/600x400/0056b3/ffffff?text=Charming+Inman+Park+Apartment',
+    images: [
+      'https://placehold.co/800x600/0056b3/ffffff?text=Inman+Park+Exterior',
+      'https://placehold.co/800x600/f8f9fa/333333?text=Modern+Kitchen'
+    ],
     features: [
       'In-Unit Laundry',
       'Updated Kitchen',
@@ -65,7 +90,11 @@ const listingsData = [
     sqft: 450,
     leaseTerm: 'Semester or Annual',
     utilities: 'Included',
-    img: 'https://placehold.co/600x400/e63900/ffffff?text=GT+Student+Studio',
+    images: [
+      'https://placehold.co/800x600/e63900/ffffff?text=GT+Studio+Front',
+      'https://placehold.co/800x600/6c757d/ffffff?text=Study+Nook',
+      'https://placehold.co/800x600/1e3a8a/ffffff?text=Bathroom'
+    ],
     features: [
       'Furnished',
       'High-Speed WiFi',
@@ -87,7 +116,11 @@ const listingsData = [
     sqft: 2200,
     lotSize: '800 sqm',
     yearBuilt: 2015,
-    img: 'https://placehold.co/600x400/28a745/ffffff?text=Waterfront+Home+Auckland',
+    images: [
+      'https://placehold.co/800x600/28a745/ffffff?text=Waterfront+View',
+      'https://placehold.co/800x600/0056b3/ffffff?text=Pool+Deck',
+      'https://placehold.co/800x600/f8f9fa/333333?text=Open+Plan+Kitchen'
+    ],
     features: [
       'Harbor Views',
       'Swimming Pool',
@@ -111,7 +144,10 @@ const listingsData = [
     sqft: 320,
     leaseTerm: 'Academic Year',
     utilities: 'Bills Included',
-    img: 'https://placehold.co/600x400/6c757d/ffffff?text=Oxford+Student+Flat',
+    images: [
+      'https://placehold.co/800x600/6c757d/ffffff?text=Oxford+Flat+Facade',
+      'https://placehold.co/800x600/e63900/ffffff?text=Shared+Kitchen'
+    ],
     features: [
       'Historic Building',
       'Shared Kitchen',
@@ -133,7 +169,10 @@ const listingsData = [
     sqft: 600,
     lotSize: 'N/A',
     yearBuilt: 2020,
-    img: 'https://placehold.co/600x400/0056b3/ffffff?text=Shanghai+Apartment',
+    images: [
+      'https://placehold.co/800x600/0056b3/ffffff?text=Shanghai+View',
+      'https://placehold.co/800x600/28a745/ffffff?text=Smart+Bedroom'
+    ],
     features: [
       'Floor-to-Ceiling Windows',
       'Smart Home System',
@@ -155,7 +194,12 @@ const listingsData = [
     sqft: 2400,
     lotSize: '0.25 acres',
     yearBuilt: 2022,
-    img: 'https://placehold.co/600x400/1e3a8a/ffffff?text=Luxury+Buckhead+Home',
+    images: [
+      'https://placehold.co/800x600/1e3a8a/ffffff?text=Buckhead+Exterior',
+      'https://placehold.co/800x600/f8f9fa/333333?text=Fireplace+Living',
+      'https://placehold.co/800x600/e0e0e0/999999?text=Chef+Kitchen',
+      'https://placehold.co/800x600/0056b3/ffffff?text=Backyard+Deck'
+    ],
     features: ['Granite Countertops', 'Smart Home', 'Fireplace', 'Deck', '3-Car Garage'],
     description: 'Luxury Buckhead home with pool, smart home system, fireplace, and 3-car garage. Minutes from shopping and top schools.',
     virtualTour: '#'
@@ -198,7 +242,7 @@ function renderListings(type = 'all') {
   if (listingsContainer) {
     listingsContainer.innerHTML = filtered.map(listing => `
       <div class="listing-card" data-id="${listing.id}">
-        <div class="listing-img" style="background-image: url('${listing.img}')">
+        <div class="listing-img" style="background-image: url('${Array.isArray(listing.images) ? listing.images[0] : listing.img}')">
           <span class="listing-badge">${listing.badge}</span>
         </div>
         <div class="listing-content">
@@ -228,7 +272,7 @@ function renderStudentListings() {
   if (studentListingsContainer) {
     studentListingsContainer.innerHTML = filtered.map(listing => `
       <div class="listing-card" data-id="${listing.id}">
-        <div class="listing-img" style="background-image: url('${listing.img}')">
+        <div class="listing-img" style="background-image: url('${Array.isArray(listing.images) ? listing.images[0] : listing.img}')">
           <span class="listing-badge">${listing.badge}</span>
         </div>
         <div class="listing-content">
@@ -271,10 +315,24 @@ function attachListingEventListeners() {
   });
 }
 
+// ✅ MODAL WITH BOOTSTRAP-STYLE CAROUSEL (LIGHTWEIGHT, NO BOOTSTRAP)
 function openModal(id) {
   const property = listingsData.find(p => p.id === id);
   if (!property) return;
-  currentProperty = property;
+
+  const imageSources = property.images && Array.isArray(property.images) && property.images.length > 0
+    ? property.images
+    : [property.img];
+
+  // Optional per-image captions — customize per listing if needed
+  const captions = imageSources.map((_, i) => {
+    const base = property.address.split(',')[0];
+    return i === 0 ? `${base} — Front` :
+           i === 1 ? `${base} — Interior` :
+           i === 2 ? `${base} — Kitchen` :
+           i === 3 ? `${base} — Bedroom` :
+           `${base} — View ${i + 1}`;
+  });
 
   let campusInfo = property.campus ? `<p><strong>📍 Campus:</strong> ${property.campus}</p>` : '';
   let leaseInfo = '';
@@ -285,10 +343,42 @@ function openModal(id) {
     `;
   }
 
+  // ✅ Carousel HTML (Bootstrap-inspired)
+  const carouselHTML = `
+    <div class="property-carousel">
+      <div class="carousel-inner">
+        ${imageSources.map((src, i) => `
+          <div class="carousel-item ${i === 0 ? 'active' : ''}" data-index="${i}">
+            <img src="${src}" class="d-block w-100 carousel-img" alt="${property.address} — Image ${i + 1}">
+            <div class="carousel-caption d-none d-md-block">
+              <p>${captions[i]}</p>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      ${imageSources.length > 1 ? `
+        <button class="carousel-control-prev" type="button" aria-label="Previous">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" aria-label="Next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="carousel-indicators">
+          ${imageSources.map((_, i) => `
+            <button type="button" class="${i === 0 ? 'active' : ''}" data-index="${i}" aria-label="Go to slide ${i + 1}"></button>
+          `).join('')}
+        </div>
+      ` : ''}
+    </div>
+  `;
+
   if (!modalBody) return;
   modalBody.innerHTML = `
     <div class="modal-body">
-      <div class="modal-img" style="background-image: url('${property.img}')"></div>
+      ${carouselHTML}
+
       <div class="modal-details">
         <h2>${property.address}</h2>
         <div class="price">${property.price}</div>
@@ -313,6 +403,12 @@ function openModal(id) {
     </div>
   `;
 
+  // Initialize carousel if multi-image
+  if (imageSources.length > 1) {
+    initPropertyCarousel();
+  }
+
+  // Reattach action buttons
   document.getElementById('modalVirtualTourBtn')?.addEventListener('click', () => {
     document.getElementById('propertyModal').style.display = 'none';
     openVirtualTourModal(property.id);
@@ -327,6 +423,45 @@ function openModal(id) {
 
   document.getElementById('propertyModal').style.display = 'block';
   document.body.style.overflow = 'hidden';
+}
+
+// ✅ Lightweight Carousel Controller (Vanilla JS)
+function initPropertyCarousel() {
+  const items = document.querySelectorAll('.carousel-item');
+  const indicators = document.querySelectorAll('.carousel-indicators button');
+  const prevBtn = document.querySelector('.carousel-control-prev');
+  const nextBtn = document.querySelector('.carousel-control-next');
+  let currentIndex = 0;
+  let autoInterval;
+
+  const showSlide = (index) => {
+    currentIndex = ((index % items.length) + items.length) % items.length;
+    items.forEach((item, i) => item.classList.toggle('active', i === currentIndex));
+    indicators.forEach((ind, i) => ind.classList.toggle('active', i === currentIndex));
+  };
+
+  const nextSlide = () => showSlide(currentIndex + 1);
+  const prevSlide = () => showSlide(currentIndex - 1);
+
+  nextBtn?.addEventListener('click', (e) => { e.stopPropagation(); nextSlide(); resetAuto(); });
+  prevBtn?.addEventListener('click', (e) => { e.stopPropagation(); prevSlide(); resetAuto(); });
+
+  indicators.forEach((btn, i) => {
+    btn.addEventListener('click', (e) => { e.stopPropagation(); showSlide(i); resetAuto(); });
+  });
+
+  const startAuto = () => {
+    autoInterval = setInterval(nextSlide, 5000);
+  };
+  const resetAuto = () => {
+    clearInterval(autoInterval);
+    startAuto();
+  };
+  startAuto();
+
+  const carousel = document.querySelector('.property-carousel');
+  carousel?.addEventListener('mouseenter', () => clearInterval(autoInterval));
+  carousel?.addEventListener('mouseleave', startAuto);
 }
 
 function openVirtualTourModal(id) {
@@ -390,12 +525,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ✅ Optional: Form submission UX feedback
+// ✅ Form submission UX feedback
 document.addEventListener('DOMContentLoaded', () => {
   renderListings('all');
   renderStudentListings();
 
-  // Add loading state to all submit buttons
   document.querySelectorAll('form').forEach(form => {
     const submitBtn = form.querySelector('button[type="submit"]');
     if (!submitBtn) return;
@@ -404,7 +538,6 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       const originalText = submitBtn.innerHTML;
       submitBtn.innerHTML = '📤 Sending...';
-      // Reset after 3s (in case network slow or redirect delayed)
       setTimeout(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
