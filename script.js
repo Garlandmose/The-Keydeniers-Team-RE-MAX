@@ -98,133 +98,40 @@ const listingsData = [
     description: 'Live in luxury in this fully furnished, designer corner condo in one of Midtown Atlanta’s most sought-after high-rises. Renovated by a renowned interior designer, the home features polished tile floors, floor-to-ceiling windows, a spacious balcony, and breathtaking city views.The custom kitchen is ideal for entertaining with quartz countertops, a large island, ebony cabinetry, stainless steel appliances, and a wine rack. The primary suite offers blackout drapes, a one-of-a-kind walk-in closet, and a spa-style marble bath with double shower heads. The second bedroom includes built-ins perfect for a home office.Enjoy spectacular sunrise views of Stone Mountain, Piedmont Park, Ponce City Market, and downtown. Utilities, high-speed internet, and Apple TV included. Building amenities include 24-hour concierge, pool, fitness center, theater room, clubroom, and 2 secure covered parking spaces.Steps from Peachtree St, Fox Theatre, Piedmont Park, dining, shopping, and MARTA.Minimum 1-year lease. Fully furnished. Excellent credit required.',
     virtualTour: '#'
   },
-  {
+   {
     id: 3,
     type: 'student',
     badge: 'OFF-CAMPUS',
-    price: '$850/mo',
-    address: '789 Ferst Dr, Atlanta, GA 30332',
-    campus: 'Georgia Tech (0.3 mi)',
-    university: 'georgia-tech',
+    price: '$1,050/mo',
+    address: '2739 W 47th St, Chicago, IL 60632',
+    campus: 'N/A',
+    university: 'Acero Charter - Officer Donald J. Marquez Campus',
     beds: 1,
     baths: 1,
-    sqft: 450,
+    sqft: 900,
     leaseTerm: 'Semester or Annual',
     utilities: 'Included',
     images: [
-      'https://placehold.co/800x600/e63900/ffffff?text=GT+Studio+Front',
-      'https://placehold.co/800x600/6c757d/ffffff?text=Study+Nook',
-      'https://placehold.co/800x600/1e3a8a/ffffff?text=Bathroom'
+      'https://photos.zillowstatic.com/fp/553177b3c85184b4f7e33d92dee24e78-cc_ft_1536.webp  ',
+      'https://photos.zillowstatic.com/fp/d9238ec8ee048f3579be5d24c9f0b046-uncropped_scaled_within_1536_1152.webp  ',
+      'https://photos.zillowstatic.com/fp/5b91843a647ce44f4c96d7f0253c6f1b-uncropped_scaled_within_1536_1152.webp  ',
+      'https://photos.zillowstatic.com/fp/24c81a6aee5ca5ee5999c3281f560925-uncropped_scaled_within_1536_1152.webp  ',
+      'https://photos.zillowstatic.com/fp/116fd54347ff11972bd06d39526d9dae-uncropped_scaled_within_1536_1152.webp  ',
+      'https://photos.zillowstatic.com/fp/29ed39ac2d1ac06199bb12cb70d2dae2-uncropped_scaled_within_1536_1152.webp  ',
+      'https://photos.zillowstatic.com/fp/7cb0e8e0c0b856515375ae32443da126-uncropped_scaled_within_1536_1152.webp  ',
+      'https://photos.zillowstatic.com/fp/2a92f735926c4b5f16ce74a24476144e-uncropped_scaled_within_1536_1152.webp  ',
+      'https://photos.zillowstatic.com/fp/11f2b54dae6cc3a4c492a2e01e2a30ee-uncropped_scaled_within_1536_1152.webp  ',
     ],
     features: [
       'Furnished',
       'High-Speed WiFi',
-      'Study Lounge',
-      'Gym Access',
-      '24/7 Security'
+      'Central Air',
+      
     ],
-    description: 'Modern studio near Georgia Tech — includes high-speed internet, gym, study lounge, and roommate-matching service.',
+    description: 'Freshly painted and move-in ready, this bright unit offers comfort and convenience in a highly walkable location near plenty of great restaurants. Just steps away, a laundromat less than 100 feet from your door makes doing laundry fast and easy. The kitchen features stainless steel appliances, including a modern stove and refrigerator, giving the space an updated, polished feel.The unit is not furnished, but staged photos are included in the listing to help you visualize how the space can look when fully decorated and set up as your own. Located on a main street with easy access to CTA transportation, this apartment is perfect for anyone who wants a simple commute and quick connections around the city. Schedule a tour today and see how this well-located, freshly updated unit can fit your lifestyle.*Electricy and gas already included in monthly rent *None refundable move-in fee:$525Lease is for 1 year. Electricity and gas are already included in the monthly rent. Parking can be found on the front and side street (there is typically always parking space). No smoking is allowed. Apartment was recently fully painted. Tenant will be responsible for switching out the air filter (30 second task). Landlord will provide filters.',
     virtualTour: '#'
   },
-  {
-    id: 4,
-    type: 'sale',
-    badge: 'FOR SALE',
-    price: 'NZ$1,250,000',
-    address: '42 Tamaki Drive, Auckland, New Zealand',
-    beds: 4,
-    baths: 3,
-    sqft: 2200,
-    lotSize: '800 sqm',
-    yearBuilt: 2015,
-    images: [
-      'https://placehold.co/800x600/28a745/ffffff?text=Waterfront+View',
-      'https://placehold.co/800x600/0056b3/ffffff?text=Pool+Deck',
-      'https://placehold.co/800x600/f8f9fa/333333?text=Open+Plan+Kitchen'
-    ],
-    features: [
-      'Harbor Views',
-      'Swimming Pool',
-      'Double Garage',
-      'Outdoor Kitchen',
-      'Solar Panels'
-    ],
-    description: 'Waterfront family home in Auckland — panoramic harbor views, pool, and garage. 10 mins to CBD.',
-    virtualTour: '#'
-  },
-  {
-    id: 5,
-    type: 'student',
-    badge: 'OFF-CAMPUS',
-    price: '£650/mo',
-    address: '15 Parks Road, Oxford, UK',
-    campus: 'University of Oxford (0.2 mi)',
-    university: 'oxford',
-    beds: 1,
-    baths: 1,
-    sqft: 320,
-    leaseTerm: 'Academic Year',
-    utilities: 'Bills Included',
-    images: [
-      'https://placehold.co/800x600/6c757d/ffffff?text=Oxford+Flat+Facade',
-      'https://placehold.co/800x600/e63900/ffffff?text=Shared+Kitchen'
-    ],
-    features: [
-      'Historic Building',
-      'Shared Kitchen',
-      'Bike Storage',
-      'Laundry Room',
-      '24h Reception'
-    ],
-    description: 'Historic building flat in Oxford — quiet, secure, and steps from campus. Ideal for grad students.',
-    virtualTour: '#'
-  },
-  {
-    id: 6,
-    type: 'rent',
-    badge: 'FOR RENT',
-    price: '¥8,500/mo',
-    address: 'Jing’an District, Shanghai, China',
-    beds: 1,
-    baths: 1,
-    sqft: 600,
-    lotSize: 'N/A',
-    yearBuilt: 2020,
-    images: [
-      'https://placehold.co/800x600/0056b3/ffffff?text=Shanghai+View',
-      'https://placehold.co/800x600/28a745/ffffff?text=Smart+Bedroom'
-    ],
-    features: [
-      'Floor-to-Ceiling Windows',
-      'Smart Home System',
-      'Gym & Pool',
-      'Metro Access',
-      '24h Security'
-    ],
-    description: 'Modern high-rise apartment in Shanghai — metro access, gym, 24h security. Perfect for professionals.',
-    virtualTour: '#'
-  },
-  {
-    id: 7,
-    type: 'sale',
-    badge: 'FOR SALE',
-    price: '$550,000',
-    address: '100 Lakeview Dr, Atlanta, GA 30328',
-    beds: 4,
-    baths: 3,
-    sqft: 2400,
-    lotSize: '0.25 acres',
-    yearBuilt: 2022,
-    images: [
-      'https://placehold.co/800x600/1e3a8a/ffffff?text=Buckhead+Exterior',
-      'https://placehold.co/800x600/f8f9fa/333333?text=Fireplace+Living',
-      'https://placehold.co/800x600/e0e0e0/999999?text=Chef+Kitchen',
-      'https://placehold.co/800x600/0056b3/ffffff?text=Backyard+Deck'
-    ],
-    features: ['Granite Countertops', 'Smart Home', 'Fireplace', 'Deck', '3-Car Garage'],
-    description: 'Luxury Buckhead home with pool, smart home system, fireplace, and 3-car garage. Minutes from shopping and top schools.',
-    virtualTour: '#'
-  }
+
 ];
 
 // DOM Elements
